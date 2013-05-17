@@ -16,7 +16,7 @@ def mathjax_scripts():
     if mathjax_local_path:
         mathjax_js_url = static('%s/MathJax.js' % mathjax_local_path)
     else:
-        mathjax_js_url = 'http://cdn.mathjax.org/mathjax/latest/MathJax.js'
+        mathjax_js_url = '//cdn.mathjax.org/mathjax/latest/MathJax.js'
 
     mathjax_config_file = getattr(settings, 'MATHJAX_CONFIG_FILE', None)
     url = mathjax_js_url
