@@ -21,7 +21,7 @@ mathjax_scripts. Example::
   <html>
     <head>
         <title></title>
-        {% mathax_scripts %}
+        {% mathjax_scripts %}
     </head>
     <body>
       $$1+1=2$$
