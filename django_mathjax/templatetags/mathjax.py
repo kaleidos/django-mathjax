@@ -13,10 +13,13 @@ def mathjax_scripts():
         return ''
 
     mathjax_local_path = getattr(settings, 'MATHJAX_LOCAL_PATH', None)
+    mathjax_https = getattr(settings, 'MATHJAX_HTTPS', False)
     if mathjax_local_path:
         mathjax_js_url = static('%s/MathJax.js' % mathjax_local_path)
-    else:
-        mathjax_js_url = '//cdn.mathjax.org/mathjax/latest/MathJax.js'
+    elif mathjax_https:
+        mathjax_js_url = 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js'
+    else
+        mathjax_js_url = 'http://cdn.mathjax.org/mathjax/latest/MathJax.js'
 
     mathjax_config_file = getattr(settings, 'MATHJAX_CONFIG_FILE', None)
     url = mathjax_js_url

@@ -50,6 +50,13 @@ Use a local path of MathJax Library instead of the CDN. Example::
 
   MATHJAX_LOCAL_PATH = 'js/libs/mathjax/'
 
+MATHJAX_HTTPS
+~~~~~~~~~~~~~~~~~~
+
+Use a https CDN of MathJax Library. Example::
+
+  MATHJAX_HTTPS = True
+
 MATHJAX_CONFIG_FILE
 ~~~~~~~~~~~~~~~~~~~
 
