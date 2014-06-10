@@ -8,17 +8,18 @@ register = template.Library()
 
 
 @register.simple_tag
-def mathjax_scripts():
+def mathjax_scripts(https=None):
     if not getattr(settings, 'MATHJAX_ENABLED', False):
         return ''
 
     mathjax_local_path = getattr(settings, 'MATHJAX_LOCAL_PATH', None)
-    mathjax_https = getattr(settings, 'MATHJAX_HTTPS', False)
     if mathjax_local_path:
         mathjax_js_url = static('%s/MathJax.js' % mathjax_local_path)
-    elif mathjax_https:
+    elif https is None:
+        mathjax_js_url = '//cdn.mathjax.org/mathjax/latest/MathJax.js'
+    elif https is True:
         mathjax_js_url = 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js'
-    else
+    else:
         mathjax_js_url = 'http://cdn.mathjax.org/mathjax/latest/MathJax.js'
 
     mathjax_config_file = getattr(settings, 'MATHJAX_CONFIG_FILE', None)
