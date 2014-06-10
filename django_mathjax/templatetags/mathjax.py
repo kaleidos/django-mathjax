@@ -15,9 +15,7 @@ def mathjax_scripts(https=None):
     mathjax_local_path = getattr(settings, 'MATHJAX_LOCAL_PATH', None)
     if mathjax_local_path:
         mathjax_js_url = static('%s/MathJax.js' % mathjax_local_path)
-    elif https is None:
-        mathjax_js_url = '//cdn.mathjax.org/mathjax/latest/MathJax.js'
-    elif https is True:
+    elif https:
         mathjax_js_url = 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js'
     else:
         mathjax_js_url = 'http://cdn.mathjax.org/mathjax/latest/MathJax.js'
