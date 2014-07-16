@@ -57,6 +57,8 @@ Allow to configure the config file used by mathjax. Example::
 
   MATHJAX_CONFIG_FILE = "TeX-AMS-MML_HTMLorMML"
 
+The default value is "TeX-AMS-MML_HTMLorMML".
+
 MATHJAX_CONFIG_DATA
 ~~~~~~~~~~~~~~~~~~~
 

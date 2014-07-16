@@ -18,10 +18,8 @@ def mathjax_scripts():
     else:
         mathjax_js_url = '//cdn.mathjax.org/mathjax/latest/MathJax.js'
 
-    mathjax_config_file = getattr(settings, 'MATHJAX_CONFIG_FILE', None)
-    url = mathjax_js_url
-    if mathjax_config_file:
-        url += "?config=%s" % mathjax_config_file
+    mathjax_config_file = getattr(settings, 'MATHJAX_CONFIG_FILE', "TeX-AMS-MML_HTMLorMML")
+    url = "%s?config=%s" % (mathjax_js_url, mathjax_config_file)
     load_script_tag = '<script type="text/javascript" src="%s"></script>' % url
 
     mathjax_config_data = getattr(settings, 'MATHJAX_CONFIG_DATA', None)
