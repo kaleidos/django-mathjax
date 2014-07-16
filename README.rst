@@ -35,9 +35,6 @@ settings. Example::
 
   MATHJAX_LOCAL_PATH = 'js/libs/mathjax/'
 
-You can force the usage of mathjax https CDN version enabling the template tag
-https parameter :code:`{% mathjax_scripts True %}`.
-
 Settings parameters
 -------------------
 
