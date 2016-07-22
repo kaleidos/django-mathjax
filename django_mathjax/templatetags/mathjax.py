@@ -3,6 +3,7 @@ import json
 from django import template
 from django.conf import settings
 from django.templatetags.static import static
+from django.utils.safestring import mark_safe
 
 register = template.Library()
 
@@ -31,4 +32,4 @@ def mathjax_scripts():
         config_script_tag += ');'
         config_script_tag += '</script>'
 
-    return load_script_tag + config_script_tag
+    return mark_safe(load_script_tag + config_script_tag)
