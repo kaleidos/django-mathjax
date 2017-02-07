@@ -6,7 +6,7 @@ import django_mathjax
 
 setup(
     name = 'django-mathjax',
-    version = ":versiontools:django_mathjax:",
+    version = "0.0.7",
     description = "MathJax easy integration with django",
     long_description = "",
     keywords = 'django, mathjax',
@@ -18,9 +18,6 @@ setup(
     packages = find_packages(),
     install_requires=[
         'distribute',
-    ],
-    setup_requires = [
-        'versiontools >= 1.8',
     ],
     classifiers = [
         "Programming Language :: Python",
